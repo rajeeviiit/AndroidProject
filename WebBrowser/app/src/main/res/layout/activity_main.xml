@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:textSize="20dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/goBtn" />
+
+    <EditText
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/urlBox"
+        android:layout_below="@+id/title"
+        android:hint="@string/hint"/>
+    <Button
+        android:onClick="go"
+        android:background="#009988"
+        android:textSize="20dp"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="GO"
+        android:id="@+id/goBtn"
+        android:layout_below="@+id/urlBox"
+        android:layout_centerInParent="true" />
+    <WebView
+        android:layout_below="@+id/goBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webBrowser"></WebView>
+
+</RelativeLayout>

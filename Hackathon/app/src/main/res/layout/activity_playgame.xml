@@ -2,16 +2,39 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    >
 
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnWidth="50dp"
-        android:numColumns="6"
+        android:numColumns="10"
         android:gravity="center"
+        android:listSelector="#003434"
         />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="10dp"
+        android:textAlignment="center"
+        android:text="Start"
+        android:onClick="makeReadyMap"
+        android:id="@+id/start"
 
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="180dp"
+        android:textAlignment="center"
+        android:text="Shuffle"
+        android:onClick="shuffle"
+        android:id="@+id/reset"
+
+        />
 
 </RelativeLayout>

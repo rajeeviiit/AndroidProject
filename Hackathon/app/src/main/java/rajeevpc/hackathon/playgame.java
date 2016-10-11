@@ -1,6 +1,7 @@
 package rajeevpc.hackathon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.ArrayRes;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class playgame extends AppCompatActivity {
 
@@ -23,73 +27,113 @@ public class playgame extends AppCompatActivity {
     GridView gameGrid;
     ArrayList<Integer> gridValues;
     GridAdapter gridAdapter;
-
+    Button startBtn ,shuffleBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playgame);
+        startBtn = (Button) findViewById(R.id.start);
 
+        shuffleBtn =(Button) findViewById(R.id.reset);
         gameGrid = (GridView) findViewById(R.id.gridview);
         gridAdapter = new GridAdapter(this);
+        final ShortestPath shortestPath = new ShortestPath();
+
+        //on shuffle click
+
+        shuffleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                class Shoffle{
+                    // Shuffle 2D Array with same no of columnsfor each row
+                    public void shuffle(int[][] matrix, int columns, Random rnd){
+                        int size = matrix.length*columns;
+                        for (int i = size; i> 1; i--)
+                            swap(matrix,columns,i-1,rnd.nextInt(i));
+                    }
+
+                    // Swap Function
+                    public void swap(int[][] matrix, int columns, int i,int j){
+                        int tmp = matrix[i/columns][i%columns];
+                        matrix[i / columns][i % columns] = matrix[j / columns][j % columns];
+                        matrix[j / columns][j % columns] = tmp;
+                    }
+                }
+
+            }
+        });
+
+        //on item click.
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                final ArrayList<Integer> sols = shortestPath.getSolution();
+
+
+                new Thread() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        int count = sols.size();
+
+                        for (int i = 1;i < count-1; i++) {
+
+                            final int loopNum = i;
+
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    gridAdapter.setPathItem(sols.get(loopNum), Constants.ITEM_TYPE_INTERMEDIATE_ITEM);
+
+                                }
+                            });
+                        }
+
+                    }}.start();
+
+            }
+        });
 
         gridValues = new ArrayList<>();
-//
-//        gridValues.add(0,new Integer(Constants.ITEM_TYPE_SOURCE));
-//        gridValues.add(1,new Integer(Constants.ITEM_TYPE_BANNED));
-//        gridValues.add(2,new Integer(Constants.ITEM_TYPE_BLANK));
-//        gridValues.add(3,new Integer(Constants.ITEM_TYPE_INTERMEDIATE_ITEM));
-//        gridValues.add(4,new Integer(Constants.ITEM_TYPE_BANNED));
-//        gridValues.add(5,new Integer(Constants.ITEM_TYPE_BLANK));
-//        gridValues.add(6,new Integer(Constants.ITEM_TYPE_INTERMEDIATE_ITEM));
-//        gridValues.add(7,new Integer(Constants.ITEM_TYPE_INTERMEDIATE_ITEM));
-//        gridValues.add(8,new Integer(Constants.ITEM_TYPE_DESTINATION));
-
-        ShortestPath shortestPath = new ShortestPath();
         shortestPath.makeReadyMap();
         gridAdapter.setPathValues(gridValues);
         gameGrid.setAdapter(gridAdapter);
 
-        final ArrayList<Integer> sols = shortestPath.getSolution();
+        //set on item onclicklisner game grid
 
-
-        new Thread() {
+        gameGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void run() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-
-                int count = sols.size();
-
-                for (int i = 0; i < count; i++) {
-
-                    final int loopNum = i;
-
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            gridAdapter.setPathItem(sols.get(loopNum), Constants.ITEM_TYPE_INTERMEDIATE_ITEM);
-
-                        }
-                    });
-                }
+                String value = (String) adapterView.getItemAtPosition(i);
+                Log.d("SHORTEST", " adding " +value);
 
             }
-        }.start();
+        });
 
 
     }
+
+
+
+
 
 
     public class ShortestPath {
@@ -106,6 +150,7 @@ public class playgame extends AppCompatActivity {
             }
 
             LinkedList<Field> q = new LinkedList<>();
+            LinkedList<Field> q1 = new LinkedList<>();
 
             Field start = fields[0][0];
             start.dist = 0;
@@ -170,25 +215,36 @@ public class playgame extends AppCompatActivity {
 
 
         private int XYtoIndex(int x, int y) {
-            return x * 6 + y;
+            return x * 10 + y;
         }
 
         public void makeReadyMap() {
+            Random rd=new Random();
             area = new int[][]{
-                    {2, 1, 1, 1, 1, 1},
-                    {1, 1, 1, 1, 0, 1},
-                    {1, 0, 0, 3, 1, 1},
-                    {1, 1, 1, 1, 1, 1},
-                    {0, 0, 0, 0, 0, 0}
+                    {2, 1, 1, 1, 1, 0,0,1,1,1},
+                    {1, 1, 1, 0, 1, 1,1,1,1,0},
+                    {1, 0, 0, 1, 0, 1,0,1,0,0},
+                    {1, 1, 1, 1, 1, 1,1,1,1,0},
+                    {0, 0, 0, 0, 1, 0,1,0,0,0},
+                    {1, 1, 1, 0, 1, 1,1,0,1,0},
+                    {1, 0, 0, 1, 0, 1,0,1,0,0},
+                    {1, 1, 0, 1, 1, 1,0,0,1,0},
+                    {0, 0, 1, 1, 1, 0,1,0,1,0},
+                    {1, 1, 1, 1, 1,1,1,1,1,3}
+
             };
 
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 6; j++) {
-                    gridValues.add(6 * i + j, area[i][j]);
+            //shuffle(area,10,new Random());
+
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
+                    gridValues.add(10 * i + j, area[i][j]);
                 }
             }
 
         }
+
+
 
 
         public ArrayList<Integer> getSolution() {
@@ -206,4 +262,6 @@ public class playgame extends AppCompatActivity {
             return solutions;
         }
     }
+
+
 }

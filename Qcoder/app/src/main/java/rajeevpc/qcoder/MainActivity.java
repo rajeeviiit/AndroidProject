@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 "iPhone 4S", "Samsung Galaxy Note 800",
                 "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
 
+
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
 

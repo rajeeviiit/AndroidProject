@@ -20,5 +20,6 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
     <string name="search_hint">search songs</string>
-    <string name="app_label">query</string>
+    <string name="app_label">Search</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

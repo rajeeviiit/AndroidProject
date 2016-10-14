@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     // List view
     private ListView lv;
 
+
     // Listview Adapter
     ArrayAdapter<String> adapter;
 

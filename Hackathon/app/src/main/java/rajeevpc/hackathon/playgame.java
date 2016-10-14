@@ -125,6 +125,9 @@ public class playgame extends AppCompatActivity {
                 String value = (String) adapterView.getItemAtPosition(i);
                 Log.d("SHORTEST", " adding " +value);
 
+
+
+
             }
         });
 

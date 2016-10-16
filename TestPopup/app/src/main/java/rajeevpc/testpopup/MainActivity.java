@@ -58,6 +58,8 @@ public class MainActivity extends Activity {
         int popupWidth = 200;
         int popupHeight = 150;
 
+
+
         // Inflate the popup_layout.xml
         LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.popup);
         LayoutInflater layoutInflater = (LayoutInflater) context

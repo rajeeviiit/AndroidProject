@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">FbcommentApp</string>
+
+    <string name="app_name">Facebook Comments</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_refresh">Reload</string>
 </resources>

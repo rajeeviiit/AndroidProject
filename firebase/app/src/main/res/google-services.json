@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "440786079519",
+    "firebase_url": "https://rajeevpc-c8be2.firebaseio.com",
+    "project_id": "rajeevpc-c8be2",
+    "storage_bucket": "rajeevpc-c8be2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440786079519:android:aa99c068b868b1e9",
+        "android_client_info": {
+          "package_name": "rajeevpc.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440786079519-gca9f78huj90f0vd8sr4q57h0fpns7r0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNTXFObZDQ86LN_6zWElFuvpxUJTf0YSo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

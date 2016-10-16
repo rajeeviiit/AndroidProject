@@ -21,7 +21,11 @@ card_view:cardCornerRadius="4dp">
         android:src="@drawable/ic_discount"
         android:background="@color/dot_light_screen1"/>
 
-
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/my_recycler_view"-->
+        <!--android:scrollbars="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
 </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -68,9 +72,7 @@ android:layout_gravity="center"
 android:layout_width="match_parent"
 android:layout_height="200dp"
 android:layout_below="@+id/card_view2"
-card_view:cardCornerRadius="4dp"
-    >
-
+card_view:cardCornerRadius="4dp">
 
 <ImageView
     android:layout_width="match_parent"
@@ -79,4 +81,10 @@ card_view:cardCornerRadius="4dp"
     android:background="@color/dot_light_screen4"/>
 
 </android.support.v7.widget.CardView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card_view3"/>
    </RelativeLayout>

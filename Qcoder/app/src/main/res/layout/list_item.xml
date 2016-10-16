@@ -13,6 +13,8 @@
         android:padding="10dip"
         android:text="list item"
         android:textSize="16dip"
+        android:elevation="2dp"
         android:textStyle="bold"/>
+
 
 </LinearLayout>

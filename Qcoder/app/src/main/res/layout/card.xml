@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+    <!-- A CardView that contains a TextView -->
+
+<android.support.v7.widget.CardView
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/card_view"
+android:layout_gravity="center"
+android:layout_width="match_parent"
+android:layout_height="200dp"
+card_view:cardCornerRadius="4dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_discount"
+        android:background="@color/dot_light_screen1"/>
+
+
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/card_view"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_food"
+            android:background="@color/colorPrimaryDark"/>
+
+    </android.support.v7.widget.CardView>
+
+
+
+<android.support.v7.widget.CardView
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/card_view2"
+android:layout_gravity="center"
+android:layout_width="match_parent"
+android:layout_height="200dp"
+android:layout_below="@+id/card_view1"
+card_view:cardCornerRadius="4dp">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/ic_movie"
+    android:background="@color/dot_dark_screen2"/>
+
+</android.support.v7.widget.CardView>
+
+
+<android.support.v7.widget.CardView
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/card_view3"
+android:layout_gravity="center"
+android:layout_width="match_parent"
+android:layout_height="200dp"
+android:layout_below="@+id/card_view2"
+card_view:cardCornerRadius="4dp"
+    >
+
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/ic_travel"
+    android:background="@color/dot_light_screen4"/>
+
+</android.support.v7.widget.CardView>
+   </RelativeLayout>

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "440786079519",
-    "firebase_url": "https://rajeevpc-c8be2.firebaseio.com",
-    "project_id": "rajeevpc-c8be2",
-    "storage_bucket": "rajeevpc-c8be2.appspot.com"
+    "project_number": "208629483723",
+    "firebase_url": "https://fir-app-90adf.firebaseio.com",
+    "project_id": "fir-app-90adf",
+    "storage_bucket": "fir-app-90adf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:440786079519:android:aa99c068b868b1e9",
+        "mobilesdk_app_id": "1:208629483723:android:aa99c068b868b1e9",
         "android_client_info": {
           "package_name": "rajeevpc.firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "440786079519-gca9f78huj90f0vd8sr4q57h0fpns7r0.apps.googleusercontent.com",
+          "client_id": "208629483723-fsgsfvmpv8fec0nrkitqb0t0tb3jt6ej.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDNTXFObZDQ86LN_6zWElFuvpxUJTf0YSo"
+          "current_key": "AIzaSyC_9TzR4kGwPtebexMsb1u-W1-81elEVsk"
         }
       ],
       "services": {

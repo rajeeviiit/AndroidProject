@@ -9,4 +9,45 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="rajeevpc.firebase.LoginActivity">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextEmail"
+            android:hint="Email"
+            android:background="@color/colorAccent"
+            />
+        <EditText
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPassword"
+            android:hint="Password"
+            android:background="@color/colorAccent"
+            />
+        <Button
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonRegister"
+            android:text="Register User"
+            android:textColor="#000ffe"
+            android:background="@color/common_google_signin_btn_text_dark_pressed"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already Registered ? Sign in here"
+            android:textAlignment="center"
+            android:id="@+id/textViewSignin"
+            />
+    </LinearLayout>
 </RelativeLayout>

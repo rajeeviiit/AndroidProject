@@ -11,13 +11,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorPrimary"
     tools:context="rajeevpc.firebase.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration Details"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_marginTop="80dp"/>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true">
-    
+
     <EditText
         android:layout_margin="15dp"
         android:layout_width="match_parent"
@@ -46,7 +53,8 @@
         android:layout_height="wrap_content"
         android:text="Already Registered ? Sign in here"
         android:textAlignment="center"
-        android:id="@+id/textViewSignin"/>
+        android:id="@+id/textViewSignin"
+        />
 </LinearLayout>
 
 

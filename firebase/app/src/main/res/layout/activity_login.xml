@@ -31,7 +31,7 @@
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editTextLEmail"
             android:hint="Email"
             android:background="@color/colorAccent"
             />
@@ -39,7 +39,7 @@
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editTextLPassword"
             android:hint="Password"
             android:background="@color/colorAccent"
             />
@@ -47,8 +47,8 @@
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonRegister"
-            android:text="Register User"
+            android:id="@+id/buttonLogin"
+            android:text="Login User"
             android:textColor="#000ffe"
             android:background="@color/colorPrimaryDark"
             />

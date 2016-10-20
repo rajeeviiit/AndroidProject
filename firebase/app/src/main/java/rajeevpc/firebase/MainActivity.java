@@ -1,6 +1,7 @@
 package rajeevpc.firebase;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         firebaseAuth=FirebaseAuth.getInstance();
+        if(firebaseAuth.getCurrentUser()!=null){
+            //profile
+            finish();
+            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+        }
+
         progressDialog =new ProgressDialog(this);
 
         buttonRegister=(Button)findViewById(R.id.buttonRegister);
@@ -64,12 +71,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progressDialog.dismiss();
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this,"Registered successfully",Toast.LENGTH_LONG).show();
+
+
+
+                        finish();
+                        startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+
                 }else {
-                    Toast.makeText(MainActivity.this,"could not registered. please try again ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
 
                 }
+                progressDialog.dismiss();
 
 
             }
@@ -85,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(view == textViewSignin){
             //will open login activity
+            startActivity(new Intent(this,LoginActivity.class));
         }
 
     }

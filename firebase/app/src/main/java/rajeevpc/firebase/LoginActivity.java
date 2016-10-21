@@ -62,10 +62,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }
 
-        progressDialog.setMessage("Registering User ..");
+        progressDialog.setMessage("Logging User ..");
         progressDialog.show();
 
-        firebaseAuth.createUserWithEmailAndPassword(email,password)
+        firebaseAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -74,6 +74,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             finish();
                             startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
 
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this,"Login Error",Toast.LENGTH_LONG).show();
                         }
 
                     }

@@ -25,14 +25,14 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:id="@+id/editText"
+        android:id="@+id/room_name_editText"
         android:layout_below="@+id/listView"
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADD ROOM"
-        android:id="@+id/button"
+        android:id="@+id/btn_add_room"
         android:layout_marginLeft="20dp"
        />
     </LinearLayout>

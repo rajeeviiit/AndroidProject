@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "628904864714",
+    "firebase_url": "https://chatapp-672f8.firebaseio.com",
+    "project_id": "chatapp-672f8",
+    "storage_bucket": "chatapp-672f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628904864714:android:7dd8a50c44fd4cb0",
+        "android_client_info": {
+          "package_name": "rajeevpc.real_time_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628904864714-pfjr61fe1uceodo1rk2ukpe5hd8u4qba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTI60Bhb2Cj9CQBJgMf2rRyCQIyYk_9pM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

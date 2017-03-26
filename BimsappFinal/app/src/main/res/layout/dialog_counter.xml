@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/rl1"
+    android:layout_width="300dp"
+    android:layout_height="500dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/bk3"
+        android:id="@+id/dialogImage"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="center"
+        android:layout_marginTop="42dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="200dp"
+        android:layout_above="@+id/counterOk"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/rectimage"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_width="350dp"
+            android:src="@drawable/rectangle"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+>
+        </ImageView>
+
+        <Button
+            android:text="-"
+            android:layout_marginEnd="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDown"
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="+"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonUp"
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="0"
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_width="wrap_content"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/count" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:text="OK"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/counterOk"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:elevation="7dp"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

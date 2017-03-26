@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#abc"
+    tools:context="com.example.prateek.bimsapp.LocationFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:onClick="onRadioButtonClicked"
+            android:layout_alignTop="@+id/textViewAddress2"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton android:id="@+id/radio_ninjas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:onClick="onRadioButtonClicked2"
+            android:layout_alignTop="@+id/textViewAddress"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:hint="Your Address Here"
+            android:gravity="center"
+            android:background="@drawable/box"
+            android:id="@+id/textViewAddress"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/textViewAddress2"
+            android:layout_alignStart="@+id/textViewAddress2"
+            android:layout_marginTop="36dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="Choose Another Location"
+            android:background="@drawable/buttonshape"
+            android:textColor="@color/colorPrimary1"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPickLocation"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/textViewAddress"
+            android:layout_alignStart="@+id/textViewAddress"
+            android:layout_marginTop="34dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:hint="No Previous Addresses Saved"
+            android:gravity="center"
+            android:background="@drawable/box"
+            android:id="@+id/textViewAddress2"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/radio_ninjas" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

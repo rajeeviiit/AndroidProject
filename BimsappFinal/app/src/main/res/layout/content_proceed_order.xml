@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_proceed_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.prateek.bimsapp.ProceedOrder"
+    tools:showIn="@layout/activity_proceed_order">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:id="@+id/cartNavigator"
+            android:text="Cart"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:id="@+id/addressNavigator"
+            android:text="Address"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/remarksNavigator"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+
+            android:text="Remarks"/>
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:id="@+id/summaryNavigator"
+            android:layout_height="wrap_content"
+            android:text="Summary"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/viewPager"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/backButton"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:textColor="#6d6d6d"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:id="@+id/nextButton"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="16sp"
+            android:textColor="#6d6d6d"
+            android:padding="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

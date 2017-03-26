@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bimsapp</string>
+    <string name="title_activity_menu_page">MenuPage</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_proceed_order">ProceedOrder</string>
+    <string name="title_activity_order_food_final">OrderFoodFinal</string>
+    <string name="title_activity_menu_main">MenuMain</string>
+    <string name="title_activity_select_restraunt">SelectRestraunt</string>
+</resources>

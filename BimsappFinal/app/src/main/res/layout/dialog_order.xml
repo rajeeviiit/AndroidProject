@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="73dp">
+
+        <TextView
+            android:text=""
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_width="wrap_content"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/count" />
+
+    <TextView
+        android:text="Total   = "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rectimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/amount" />
+
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:layout_width="350dp"
+        android:src="@drawable/rectangle"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+    </ImageView>
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogOk"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonUp"
+        android:layout_alignTop="@+id/rectimage"
+        android:layout_toStartOf="@+id/dialogOk" />
+
+        <Button
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDown"
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+

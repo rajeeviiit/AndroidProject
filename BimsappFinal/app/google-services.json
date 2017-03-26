@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "847235219484",
+    "firebase_url": "https://bimsapp-81da4.firebaseio.com",
+    "project_id": "bimsapp-81da4",
+    "storage_bucket": "bimsapp-81da4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847235219484:android:8acdbd95e64c1e98",
+        "android_client_info": {
+          "package_name": "com.example.prateek.bimsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847235219484-v1cjdf6kqr3b35eh835k087a8b4u647p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prateek.bimsapp",
+            "certificate_hash": "40AF03CD9EC8583CC57EBFA96543F909C708777C"
+          }
+        },
+        {
+          "client_id": "847235219484-rc4h5v8krng4v33trnhq744sjqfntg3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrPHZs4VY4oORQs7tKX4YB3SAYxOOHEGU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847235219484-rc4h5v8krng4v33trnhq744sjqfntg3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

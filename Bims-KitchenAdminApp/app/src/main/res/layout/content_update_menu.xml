@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.prateek.bimsadmin.UpdateMenu"
+    tools:showIn="@layout/activity_update_menu"
+    android:background="@drawable/menubg"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list1"
+    android:gravity="center"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Category "
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:id="@+id/textViewcat"
+        android:background="#8C001A"
+        />
+
+    <Spinner
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/spinnercat"
+        android:gravity="center"
+        android:background="#49B6BB"
+        android:layout_marginLeft="8dp"
+        android:textAlignment="center">
+
+    </Spinner>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/list1"
+    android:id="@+id/list2"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Item "
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:id="@+id/textViewitem"
+        android:background="#8C001A"
+
+        />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/editTextitem"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginLeft="8dp"
+        android:background="#49B6BB">
+
+    </EditText>
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list2"
+        android:id="@+id/list3"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        >
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="Price "
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:id="@+id/textViewprice"
+        android:background="#8C001A"
+
+        />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/editTextprice"
+        android:layout_below="@+id/spinnercat"
+        android:background="#49B6BB"
+        android:gravity="center"
+        android:layout_marginLeft="8dp"
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_above="@+id/textViewprice"></EditText>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/img"
+    android:gravity="center"
+    android:layout_below="@+id/list3"
+    android:layout_marginTop="34dp">
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/bselect"
+        android:background="#ffffff"
+        android:layout_centerHorizontal="true" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/img"
+    android:layout_marginTop="50dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:gravity="center"
+    android:layout_marginBottom="20dp">
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:textColor="#ffffff"
+        android:background="#8C001A"
+        android:textAlignment="center"
+        android:id="@+id/bupdate"
+        android:onClick="update"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:id="@+id/bselect"
+        android:textColor="#ffffff"
+        android:onClick="select"
+        android:background="#8C001A"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
+</RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

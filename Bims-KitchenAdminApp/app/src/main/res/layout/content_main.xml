@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menubg"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.prateek.bimsadmin.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:id="@+id/linearLayout1"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/iv1"
+                android:src="@drawable/bims"/>
+            <!--<ImageView-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:src="@drawable/del"-->
+                <!--android:id="@+id/iv2"/>-->
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/linearLayout1"
+            android:id="@+id/linearLayout2">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/badmin"
+                android:text="Update Menu"
+                android:onClick="goToAdmin"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="#8C001A"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bview"
+                android:layout_below="@+id/badmin"
+                android:text="View Menu"
+                android:layout_marginTop="15dp"
+                android:onClick="goToMenu"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="#8C001A"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/border"
+                android:layout_below="@+id/bview"
+                android:text="View Order"
+                android:layout_marginTop="15dp"
+                android:onClick="goToOrder"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="#8C001A"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

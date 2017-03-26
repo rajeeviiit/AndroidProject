@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Admin</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string>
+    <string name="title_activity_update_menu">UpdateMenu</string>
+    <string-array name="food_cat">
+        <item>Select</item>
+        <item>Veg</item>
+        <item>Nonveg</item>
+        <item>Bev</item>
+    </string-array>
+    <string name="title_activity_track">Map</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

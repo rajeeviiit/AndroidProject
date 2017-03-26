@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Puzzle8</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="shuffle_button_label">Shuffle</string>
+    <string name="take_photo_button_label">Take photo</string>
+    <string name="solve_button_label">Solve</string>
+</resources>

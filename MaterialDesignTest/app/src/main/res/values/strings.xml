@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MaterialDesignTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_navigation">Navigation</string>
+    <string name="action_library">Tab Using Library</string>
+    <string name="next">next</string>
+    <string name="title_activity_sub">SubActivity</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="tabs">
+        <item>TAB 1</item>
+        <item>TAB 2</item>
+        <item>TAB 3</item>
+        <item>TAB 4</item>
+        <item>TAB 5</item>
+    </string-array>
+    <string name="title_activity_using_tab_library">ActivityUsingTabLibrary</string>
+</resources>

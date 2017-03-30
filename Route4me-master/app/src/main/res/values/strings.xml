@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Route4me</string>
+    <string name="instructions">
+        "1. Select the source node.\n"
+        "2. Click on the start button.\n"
+        "3. Game automatically traverse you through the possible shortest path to the destination.\n"
+        "4. If it is not possible to reach the destination then it will simply show error message.\n"
+        "5. You can shuffle position of block nodes using shuffle button and restart the game.\n"
+
+        "<bold>Note :</bold> It will move only in horizontal and vertical direction."
+
+
+    </string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+  <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+android:background="#FFFFFF"
+    >
+<GridView
+    android:id="@+id/gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnWidth="50dp"
+    android:numColumns="10"
+    android:gravity="center"
+    android:listSelector="#003434"
+    />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="20dp"
+        android:textAlignment="center"
+        android:background="@drawable/input_outline"
+        android:text="Start"
+
+        android:onClick="findShortestPath"
+        android:id="@+id/start"
+
+
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="190dp"
+        android:textAlignment="center"
+        android:text="Shuffle"
+        android:background="@drawable/input_outline"
+        android:id="@+id/reset"
+
+
+        />
+
+</RelativeLayout>

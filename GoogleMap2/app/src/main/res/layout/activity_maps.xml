@@ -1,0 +1,81 @@
+<LinearLayout
+
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Type places here"
+        android:ems="10"
+        android:id="@+id/TFaddress"
+        />
+
+
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+    <Button
+        android:text="Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSearch"
+        android:onClick="onSearch"
+        android:layout_marginLeft="50dp"
+        />
+        <Button
+            android:text="Map type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bType"
+            android:onClick="changeType"
+            android:layout_marginLeft="20dp"
+            />
+        
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="280dp"
+        android:layout_height="473dp"
+        tools:context="rajeevpc.googlemap.MapsActivity"
+        tools:layout="@android:layout/activity_list_item" />
+
+
+    <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bzoomin"
+        android:onClick="onZoom" />
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bzoomout"
+        android:onClick="onZoom" />
+       </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

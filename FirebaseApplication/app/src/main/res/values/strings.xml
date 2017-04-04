@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirebaseApplication</string>
+    <string name="title_activity_data_send_to_firebase">DataSendToFirebase</string>
 </resources>

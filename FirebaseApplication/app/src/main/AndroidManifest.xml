@@ -22,7 +22,8 @@
             android:name=".DataSendToFirebase"
             android:label="@string/title_activity_data_send_to_firebase"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DataGetFromFirebase"></activity>
+        <activity android:name=".DataGetFromFirebase" />
+        <activity android:name=".DashboardActivity" />
     </application>
 
 </manifest>

@@ -11,34 +11,27 @@
         android:text="BITCOIN in INR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_marginRight="10dp"
-        android:layout_alignStart="@+id/button3"
-        android:id="@+id/button4" />
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:onClick="GoToInr"
+        android:id="@+id/button4"
+
+        android:layout_marginBottom="176dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text=" BITCOIN in USD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="44dp" />
+        android:onClick="GoToUsd"
+        android:layout_marginBottom="48dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
 
-    <Button
-        android:text="Logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button3"
-        android:layout_alignEnd="@+id/button3"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:id="@+id/logoutBtn" />
+        android:layout_above="@+id/button4"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

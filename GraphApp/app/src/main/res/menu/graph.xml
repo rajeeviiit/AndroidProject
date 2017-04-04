@@ -4,11 +4,13 @@
     tools:context="rajeevpc.graphapp.MainActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
         android:id="@+id/action_logout"
+        android:orderInCategory="1"
 
-        android:orderInCategory="200"
-        android:title="@string/logout"
+        android:icon="@drawable/image"
+        android:title="@string/back"
         app:showAsAction="always" />
 
 

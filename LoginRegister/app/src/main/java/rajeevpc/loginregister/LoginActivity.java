@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private AppCompatButton buttonLogin;
     private TextView Signuplink;
 
-    private boolean loggedIn = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,23 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //In onresume fetching value from sharedpreference
-        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME,Context.MODE_PRIVATE);
 
-        //Fetching the boolean value form sharedpreferences
-        loggedIn = sharedPreferences.getBoolean(config.LOGGEDIN_SHARED_PREF, false);
-
-        //If we will get true
-        if(loggedIn){
-            //We will start the Profile Activity
-            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-            startActivity(intent);
-        }
-
-    }
     private void login(){
         //Getting values from edit texts
         final String email = editTextEmail.getText().toString().trim();
@@ -79,30 +63,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         //If we are getting success from server
                         if(response.equalsIgnoreCase(config.LOGIN_SUCCESS)){
 
-                            //Creating a shared preference
-                            SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-
-                            //Creating editor to store values to shared preferences
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                            //Adding values to editor
-                            editor.putBoolean(config.LOGGEDIN_SHARED_PREF, true);
-                            editor.putString(config.EMAIL_SHARED_PREF, email);
-
-                            //Saving values to editor
-                            editor.commit();
-
-                            //Starting profile activity
-//                            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-//                            startActivity(intent);
-
 
                         }else{
                             //If the server response is not success
                             //Displaying an error message on toast
-                            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-                            startActivity(intent);
-                            //Toast.makeText(LoginActivity.this, response, Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, response, Toast.LENGTH_LONG).show();
                         }
                     }
                 },

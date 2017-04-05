@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(RegisterActivity.this, "Please Wait",null, true, true);
+                loading = ProgressDialog.show(RegisterActivity.this, "Please Wait","Processing...", true, true);
             }
 
             @Override

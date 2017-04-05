@@ -19,7 +19,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_marginTop="8dp"
             android:background="#783e04"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -37,7 +37,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_marginTop="8dp"
             android:background="#783e04"
             android:layout_marginBottom="8dp">
@@ -54,7 +54,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_marginTop="8dp"
             android:background="#783e04"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -73,7 +73,7 @@
             android:layout_marginTop="8dp"
             android:background="#783e04"
             android:layout_marginBottom="8dp"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -92,7 +92,7 @@
             android:text="Register"
             android:layout_marginTop="15dp"
             android:textSize="20dp"
-            android:background="#000000"
+            android:background="@color/colorPrimary"
             android:padding="20dp"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
             android:id="@+id/link_login"
             android:layout_marginTop="20dp"
             android:textColor="#ffffff"
-            android:text="Already Registered ? Login Now !"
+            android:text="Go To Login !"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

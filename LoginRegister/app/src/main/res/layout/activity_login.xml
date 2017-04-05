@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="#783e04"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_marginBottom="8dp">
 
             <EditText android:id="@+id/editTextEmail"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#783e04"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#3F51B5"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/editTextPassword"
@@ -52,7 +52,7 @@
             android:id="@+id/buttonLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#131313"
+            android:background="@color/colorPrimary"
             android:textColor="#ffffff"
             android:textSize="20dp"
             android:layout_marginTop="24dp"
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:layout_marginBottom="24dp"
-            android:text="Not Registered ? Register Now !"
+            android:text="Register Here !"
             android:gravity="center"
             android:textSize="16dip"/>
         <ProgressBar

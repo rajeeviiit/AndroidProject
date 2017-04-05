@@ -45,25 +45,25 @@ public class RateParser {
         return dates;
     }
 
-    public ArrayList<Data> getRates(String response) throws JSONException, ParseException {
-        ArrayList<Data> datas = new ArrayList<>();
+    public ArrayList<Dataa> getRates(String response) throws JSONException, ParseException {
+        ArrayList<Dataa> datas = new ArrayList<>();
 
         JSONObject object = new JSONObject(response);
         JSONObject bpiObject = object.getJSONObject("bpi");
         ArrayList<String> datesKeys = getDates();
 
         for(int i=0;i<datesKeys.size();i++){
-            datas.add(new Data(datesKeys.get(i).toString(),bpiObject.getDouble(datesKeys.get(i))));
+            datas.add(new Dataa(datesKeys.get(i).toString(),bpiObject.getDouble(datesKeys.get(i))));
         }
 
         return datas;
     }
 
-    class Data{
+    class Dataa{
         public String date;
         public double rate;
 
-        public Data(String date, double rate) {
+        public Dataa(String date, double rate) {
             this.date = date;
             this.rate = rate;
         }

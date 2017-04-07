@@ -1,6 +1,8 @@
 package rajeevpc.graphapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.Preference;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ public class AccountActivity extends AppCompatActivity {
     private Button mButtonUsd,mButtonInr;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +57,6 @@ public class AccountActivity extends AppCompatActivity {
         if (id == R.id.action_logout) {
             mAuth.signOut();
         }
-
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -71,7 +71,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     public void GoToInr(View view) {
-        startActivity(new Intent(AccountActivity.this, GraphActivity.class));
-    }
 
+        startActivity(new Intent(AccountActivity.this, INR.class));
+    }
 }

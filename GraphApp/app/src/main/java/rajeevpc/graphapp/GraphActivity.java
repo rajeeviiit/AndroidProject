@@ -29,19 +29,19 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
-public class GraphActivity extends AppCompatActivity{
+public class GraphActivity extends AppCompatActivity {
 
     String str_date = "2013-09-01";
     String end_date = "2013-09-05";
+    String currency_USD = "USD";
     String CURRENCY_URL = "http://api.coindesk.com/v1/bpi/historical/close.json";
     String KEY_START = "start";
     String KEY_END = "end";
+    String KEU_INDEX = "currency";
 
-    ArrayList<String> dates = new ArrayList<>();
-
-    ArrayList<Dataa> datas = new ArrayList<>();
 
 
 
@@ -51,21 +51,20 @@ public class GraphActivity extends AppCompatActivity{
         String str_date = "2013-09-01";
         String end_date = "2013-09-05";
 
+
         DateFormat formatter;
         formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date startDate = formatter.parse(str_date);
         Date endDate = formatter.parse(end_date);
-        long interval = 24*1000*60*60;
+        long interval = 24 * 1000 * 60 * 60;
         long endTime = endDate.getTime();
         long currTime = startDate.getTime();
-        while(currTime<=endTime){
+        while (currTime <= endTime) {
             dates.add(formatter.format(new Date(currTime)));
-            currTime+=interval;
+            currTime += interval;
         }
         return dates;
     }
-
-
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,110 +72,54 @@ public class GraphActivity extends AppCompatActivity{
         setContentView(R.layout.activity_graph);
 
 
+
         //start parsing
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, CURRENCY_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, CURRENCY_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
+                        Log.e("Response", response);
                         try {
-                            JSONObject jobj = new JSONObject(response);
-
-
-
-                            // token = jobj.getString("token");
-
-
-
-                            //test
-
-                            DateFormat formatter;
-                            formatter = new SimpleDateFormat("yyyy-MM-dd");
-                            Date startDate = formatter.parse(str_date);
-                            Date endDate = formatter.parse(end_date);
-                            long interval = 24*1000*60*60;
-                            long endTime = endDate.getTime();
-                            long currTime = startDate.getTime();
-                            while(currTime<=endTime){
-                                dates.add(formatter.format(new Date(currTime)));
-                                currTime+=interval;
+                            JSONObject obj = new JSONObject(response);
+                            obj = obj.getJSONObject("bpi");
+                            Iterator<?> keys = obj.keys();
+                            int size = obj.length();
+                            int index = 0;
+                            GraphView graph = (GraphView) findViewById(R.id.graph);
+                            DataPoint[] points = new DataPoint[size];
+                            while (keys.hasNext()) {
+                                String key = (String) keys.next();
+                                double currency = obj.getDouble(key);
+                                points[index] = new DataPoint(index, currency);
+                                index++;
                             }
-
-
-                            //data
-
-                            JSONObject object = new JSONObject(response);
-                            JSONObject bpiObject = object.getJSONObject("bpi");
-
-
-                            ArrayList<String> datesKeys = getDates();
-
-                            RateParser rp = new RateParser();
-
-                            for(int i=0;i<datesKeys.size();i++){
-                                datas.add(new Dataa(datesKeys.get(i).toString(),bpiObject.getDouble(datesKeys.get(i))));
-                            }
-
-
-
-
-
-
-
-
-
-
-
-                            Log.e("tag", response);
-
-
+                            Log.e("Value of index", "" + index);
+                            LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(points);
+                            graph.addSeries(series);
                         } catch (JSONException e) {
-                            e.printStackTrace();
-                        } catch (ParseException e) {
-                            e.printStackTrace();
+                            Toast.makeText(GraphActivity.this, e.toString(), Toast.LENGTH_LONG).show();
                         }
-
-
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(GraphActivity.this,error.toString(),Toast.LENGTH_LONG ).show();
-
-
+                        Log.e("Error in Request", "" + error);
+                        Toast.makeText(GraphActivity.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
-                }){
+                }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> map = new HashMap<String,String>();
-                map.put(KEY_START,str_date);
-                map.put(KEY_END,end_date);
+                Map<String, String> map = new HashMap<String, String>();
+                map.put(KEY_START, str_date);
+                map.put(KEY_END, end_date);
+                map.put(KEU_INDEX, currency_USD);
                 return map;
             }
         };
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
-        //end of parsing
-
-
-
-
-
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(dates.indexOf(0), datas.indexOf(0)),
-                new DataPoint(dates.indexOf(1), datas.indexOf(1)),
-                new DataPoint(dates.indexOf(2), datas.indexOf(2)),
-                new DataPoint(dates.indexOf(3), datas.indexOf(3)),
-                new DataPoint(dates.indexOf(4), datas.indexOf(4)),
-
-        });
-        graph.addSeries(series);
-
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -187,6 +130,7 @@ public class GraphActivity extends AppCompatActivity{
 
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -201,22 +145,7 @@ public class GraphActivity extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
 
 
-
-
     }
 }
-
-class Dataa {
-    public String date;
-    public double rate;
-
-    public Dataa(String date, double rate) {
-        this.date = date;
-        this.rate = rate;
-    }
-
-
-}
-
 
 

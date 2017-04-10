@@ -8,6 +8,19 @@
     tools:context="rajeevpc.graphapp.AccountActivity">
 
     <Button
+        android:text=" BITCOIN in USD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="GoToUsd"
+        android:layout_marginBottom="38dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+
+        android:layout_above="@+id/button4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:text="BITCOIN in INR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,22 +29,10 @@
         android:onClick="GoToInr"
         android:id="@+id/button4"
 
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="174dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text=" BITCOIN in USD"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:onClick="GoToUsd"
-        android:layout_marginBottom="48dp"
-        android:background="@color/colorPrimary"
-        android:textColor="#ffffff"
-
-        android:layout_above="@+id/button4"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/button3"
+        android:layout_alignEnd="@+id/button3" />
 
 
 </RelativeLayout>

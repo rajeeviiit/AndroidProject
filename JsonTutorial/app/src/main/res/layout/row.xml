@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/images" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tom Cruise"
+                android:textColor="#166CED"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvDateOfBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D64530"
+                android:text="Date of Birth: July 3, 1962" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height: 1.80 m"
+                android:textColor="#D64530"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D64530"
+                android:text="United States" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDescriptionn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#009A57"
+        android:text="Description" />
+
+    <TextView
+        android:id="@+id/tvSpouse"
+        android:layout_width="wrap_content" android:textColor="#166CED"
+        android:layout_height="wrap_content"
+        android:text="Spouse: Katie Holmes" />
+
+    <TextView
+        android:id="@+id/tvChildren"
+        android:layout_width="wrap_content" android:textColor="#166CED"
+        android:layout_height="wrap_content"
+        android:text="Children: Suri Cruise, Isabella Jane Cruise, Connor Cruise" />
+
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Real-time-chat</string>
+    <string name="app_name">chatApp</string>
     <string name="logout">Logout</string>
     <string name="clear">Clear</string>
 </resources>

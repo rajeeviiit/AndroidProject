@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by jsroyal on 8/4/17.
+ * Created by Rajeev on 8/4/17.
  */
 
 public class GitHubRepoAdapter extends ArrayAdapter<GitHubRepo> {

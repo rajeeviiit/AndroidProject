@@ -12,28 +12,28 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
 
         android:layout_alignParentStart="true"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/msg_input"
-            android:layout_width="200dp"
+            android:layout_width="254dp"
             android:layout_height="50dp"
-            android:textColor="#000000"
-            android:hint="type..."/>
+            android:hint="type message..."
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:layout_gravity="center"
             android:background="@color/colorPrimaryDark"
-            android:layout_marginLeft="20dp"
-            android:text="SEND" />
+            android:text="SEND"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 
@@ -58,10 +58,10 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:textColor="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="message" />
+                android:hint="message"
+                android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
     </ScrollView>

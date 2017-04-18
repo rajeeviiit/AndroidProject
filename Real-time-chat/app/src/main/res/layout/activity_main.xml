@@ -20,7 +20,7 @@
             android:id="@+id/room_name_editText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="type..."
+            android:hint="create new room or select below room"
             android:textColor="#000000"
 
             />
@@ -28,11 +28,11 @@
         <Button
             android:id="@+id/btn_add_room"
             android:layout_width="wrap_content"
-            android:background="@color/colorPrimary"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
             android:text=" ADD NEW ROOM "
+            android:textColor="#ffffff"
 
             />
     </LinearLayout>

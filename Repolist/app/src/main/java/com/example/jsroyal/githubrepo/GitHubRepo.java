@@ -1,7 +1,7 @@
 package com.example.jsroyal.githubrepo;
 
 /**
- * Created by jsroyal on 8/4/17.
+ * Created by Rajeev on 8/4/17.
  */
 
 public class GitHubRepo {

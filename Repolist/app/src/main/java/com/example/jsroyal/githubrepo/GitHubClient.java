@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 /**
- * Created by jsroyal on 8/4/17.
+ * Created by Rajeev on 8/4/17.
  */
 
 public interface GitHubClient {

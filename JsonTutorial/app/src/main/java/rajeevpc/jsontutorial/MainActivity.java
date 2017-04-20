@@ -124,9 +124,9 @@ public class MainActivity extends Activity {
         protected void onPostExecute(Boolean result) {
             dialog.cancel();
             adapter.notifyDataSetChanged();
-            if(result == false)
+            if(result == false) {
                 Toast.makeText(getApplicationContext(), "Unable to fetch data from server", Toast.LENGTH_LONG).show();
-
+            }
         }
     }
 

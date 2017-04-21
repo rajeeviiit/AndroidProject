@@ -46,17 +46,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name"
-        android:layout_marginLeft="20dp"
-        android:layout_above="@+id/textView2"
-
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_alignStart="@+id/editText3_marks"
-        android:layout_alignParentTop="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/editText2_surname"
         android:layout_marginLeft="10dp"
         android:layout_above="@+id/textView3"
@@ -71,21 +60,6 @@
         android:layout_toRightOf="@+id/textView3"
         android:layout_toEndOf="@id/textView2"
          />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD DATA"
-        android:id="@+id/button_add"
-        android:layout_alignTop="@+id/button_ViewAll"
-        android:layout_toEndOf="@+id/textView3" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Data"
-        android:id="@+id/button_ViewAll"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/button_add" />
 
     <Button
         android:layout_width="wrap_content"
@@ -118,5 +92,31 @@
         android:id="@+id/button_delete"
         android:layout_below="@+id/button_ViewAll"
         android:layout_toEndOf="@+id/button_update" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_name"
+        android:layout_marginLeft="20dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD DATA"
+        android:id="@+id/button_add"
+        android:layout_alignBaseline="@+id/button_ViewAll"
+        android:layout_alignBottom="@+id/button_ViewAll"
+        android:layout_alignStart="@+id/edittextid" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Data"
+        android:id="@+id/button_ViewAll"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/button_add" />
 
 </RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="rajeevpc.sharedpreferences.SecondActivity">
+
+    <Button
+        android:text="previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnload"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:id="@+id/btnprevious" />
+
+    <Button
+        android:text="load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnload"
+        android:onClick="load"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Uername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnload"
+        android:layout_alignEnd="@+id/btnload"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="57dp"
+        android:id="@+id/tvname"
+        android:textSize="18dp" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/tvpass"
+        android:textSize="18dp"
+        android:layout_below="@+id/tvname"
+        android:layout_alignStart="@+id/tvname" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvpass"
+        android:layout_alignStart="@+id/tvoutusername"
+        android:id="@+id/tvoutpassword" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="79dp"
+        android:hint="username"
+        android:id="@+id/tvoutusername"
+        android:layout_alignTop="@+id/tvname"
+        android:layout_alignEnd="@+id/btnprevious" />
+</RelativeLayout>

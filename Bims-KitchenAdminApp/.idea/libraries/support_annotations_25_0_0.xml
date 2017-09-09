@@ -4,6 +4,8 @@
       <root url="jar://E:/Software/Programming/Android/sdk/androidSdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://E:/Software/Programming/Android/sdk/androidSdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

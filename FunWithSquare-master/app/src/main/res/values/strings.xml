@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">(Fun_Math)^2</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="large_text">
+       "<b>(Fun_Math)^2</b> \n\n"
+
+        "<b>(Fun_Math)^2</b> is a simple math game where user need to guess the correct length perfect square given the prefix. There are basically three rounds.\n\n"
+        "<b>First Round:</b>\n"
+        "User need to guess 5 different perfect squares of length 3 given a prefix of length 2."
+        "If user is able to guess the correct square then"
+        "he wins and press next to continue\n\n"
+        "<b>Second Round:</b>\n"
+        "Here the user need to guess 5 different perfect squares of length 4 given a prefix of length 2.\n\n"
+        "<b>Third Round:</b>\n"
+        "Here the user need to guess 5 different perfect squares of length 5 given a prefix of length 2.\n\n"
+        "Entering <b>SOLVE</b> at any stage leads to display of the appropriate perfect Square.\n\n"
+        "Next he enter FINISH to end the game.\n\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_team">Team</string>
+    <string name="member1">
+        "Prem Chand Saini\n"
+        "UI Development"
+    </string>
+    <string name="member2">
+        "K. Naveen Kumar\n"
+        "Algorithm"
+    </string>
+    <string name="member3">
+        "Ajit Kumar Jain\n"
+        "Idea and Implementation"
+    </string>
+    <string name="member4">
+        "Jitendra Singh Rajput\n"
+        "Implementation"
+    </string>
+
+</resources>

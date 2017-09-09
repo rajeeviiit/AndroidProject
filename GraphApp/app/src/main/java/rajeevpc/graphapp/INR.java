@@ -34,10 +34,10 @@ import java.util.Map;
 
 public class INR extends AppCompatActivity {
 
-    String str_date = "2013-09-01";
-    String end_date = "2013-09-05";
+    String str_date = "2017-05-03";
+    String end_date = "2017-05-03";
     String currency_INR = "INR";
-    String CURRENCY_URL = "http://api.coindesk.com/v1/bpi/historical/close.json";
+    String CURRENCY_URL = "http://api.coindesk.com/v1/bpi/historical/close.json?start=2017-01-01&end=2017-02-01";
     String KEY_START = "start";
     String KEY_END = "end";
     String KEU_INDEX = "currency";
@@ -48,8 +48,8 @@ public class INR extends AppCompatActivity {
     private ArrayList<String> getDates() throws ParseException {
         ArrayList<String> dates = new ArrayList<>();
 
-        String str_date = "2013-09-01";
-        String end_date = "2013-09-05";
+        String str_date = "2017-05-03";
+        String end_date = "2017-05-03";
 
 
         DateFormat formatter;
@@ -107,14 +107,6 @@ public class INR extends AppCompatActivity {
                         Toast.makeText(INR.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<String, String>();
-                map.put(KEY_START, str_date);
-                map.put(KEY_END, end_date);
-                map.put(KEU_INDEX, currency_INR);
-                return map;
-            }
         };
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);

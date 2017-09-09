@@ -9,12 +9,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Game extends AppCompatActivity {
+    //adnetworks
+    InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitial;
+
     TextView txtView, CorrectNum,Score, Round;
     Boolean flag1 = false, flag2 = false;
     Button btnNext, btnSolve, OK;
@@ -23,13 +32,35 @@ public class Game extends AppCompatActivity {
     String Square="2";
     int randomNumber, size = 0, a, start = 3, control = 0, TotalScore = 0,CurrentScore=0,x = 0, k = 0;
     ArrayList<Integer> y;
-    PatriciaTrieTest ptt = new PatriciaTrieTest();
-    PatriciaTrie pt = new PatriciaTrie();
+    PatriciaTrieTest ptt = new PatriciaTrieTest(); PatriciaTrie pt = new PatriciaTrie();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        //adnetwork
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+// Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(Game.this);
+// Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+
+        interstitial.loadAd(adRequest);
+// Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                // Call displayInterstitial() function
+                displayInterstitial();
+            }
+        });
+
+
+        //adnetwork
+
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         r = new Random();
@@ -168,4 +199,11 @@ public class Game extends AppCompatActivity {
         return randomNumber;
 
     }*/
+
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
 }

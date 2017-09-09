@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     tools:context="com.example.pcsaini779.hackathon.Game"
     android:background="#40C4FF">
@@ -266,5 +267,14 @@
         android:visibility="invisible"
         android:id="@+id/nextRound"
         android:textColor="#fff"/>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

@@ -1,0 +1,58 @@
+Procedure: Interstitial and banner ad.
+
+1. Create a new project or open your existing Android project in Android Studio 
+Then ad below line of code in build.gradle inside your dependencies and sync project before proceeding further
+
+compile 'com.google.android.gms:play-services-ads:8.4.0'
+
+2. Now open your activity layout and add below lines of code. In my case I am pasting it in activity_main.xml file.
+
+<com.google.android.gms.ads.AdView
+android:id="@+id/adView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:layout_alignParentBottom="true"
+ads:adSize="BANNER"
+ads:adUnitId="@string/banner_ad_unit_id">
+</com.google.android.gms.ads.AdView>
+
+3. Open MainActivity.java file  and add below two lines to your main class.
+
+InterstitialAd mInterstitialAd;
+private InterstitialAd interstitial;
+
+4. Now add below lines to your onCreate method in MainActivity.java file.
+
+AdView mAdView = (AdView) findViewById(R.id.adView);
+AdRequest adRequest = new AdRequest.Builder().build();
+mAdView.loadAd(adRequest);
+
+// Prepare the Interstitial Ad
+interstitial = new InterstitialAd(MainActivity.this);
+// Insert the Ad Unit ID
+interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+
+interstitial.loadAd(adRequest);
+// Prepare an Interstitial Ad Listener
+interstitial.setAdListener(new AdListener() {
+    public void onAdLoaded() {
+        // Call displayInterstitial() function
+        displayInterstitial();
+    }
+});
+
+5. Add below method to your MainActivity.java file. If you don’t know exactly where to add code just paste above last curly bracket in the code or watch video embedded above.
+
+public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+if (interstitial.isLoaded()) {
+interstitial.show();
+}
+}
+
+6. Now add below to lines to your strings.xml 
+
+<string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+

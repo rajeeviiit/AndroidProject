@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FunWithSquare.iml" filepath="$PROJECT_DIR$/FunWithSquare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FunWithSquare-master.iml" filepath="$PROJECT_DIR$/FunWithSquare-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

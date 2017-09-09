@@ -102,6 +102,27 @@
                     android:textStyle="bold"
                     android:textSize="20dp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:id="@+id/mem5"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/member5"
+                    android:textColor="#fff"
+
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
 
         </LinearLayout>
 

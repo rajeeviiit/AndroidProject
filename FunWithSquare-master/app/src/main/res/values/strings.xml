@@ -34,5 +34,12 @@
         "Jitendra Singh Rajput\n"
         "Implementation"
     </string>
+    <string name="member5">
+        "Rajeev Kumar Singh\n"
+        "Implementation of Adnetworks "
+    </string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-2260373740808742/8554879460</string>
+    <string name="admob_interstitial_id">ca-app-pub-2260373740808742/9530771981</string>
 
 </resources>

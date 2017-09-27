@@ -9,12 +9,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Gamecube extends AppCompatActivity {
+    //adnetworks
+    InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitial;
+
     TextView txtView, CorrectNum,Score, Round;
     Boolean flag1 = false, flag2 = false;
     Button btnNext, btnSolve, OK;
@@ -29,7 +38,31 @@ public class Gamecube extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_gamecube);
+
+
+        //adnetwork
+        AdView mAdView = (AdView) findViewById(R.id.adView2);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+// Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(Gamecube.this);
+// Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+
+        interstitial.loadAd(adRequest);
+// Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                // Call displayInterstitial() function
+                displayInterstitial();
+            }
+        });
+
+        //adnetwork
+
+
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         r = new Random();
@@ -151,6 +184,13 @@ public class Gamecube extends AppCompatActivity {
 
     public void putNumber(View v){
         editText.setText(v.getTag().toString());
+    }
+
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 
 }

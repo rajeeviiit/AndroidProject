@@ -40,7 +40,7 @@ public class Game extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         //adnetwork
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = (AdView) findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

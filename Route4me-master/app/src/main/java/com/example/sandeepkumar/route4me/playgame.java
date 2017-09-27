@@ -124,7 +124,7 @@ public class playgame extends AppCompatActivity {
                            for ( i = 1 ; i < count - 1; i++) {
                                 final int loopNum = i;
                                 try {
-                                    Thread.sleep(20);
+                                    Thread.sleep(100);
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }

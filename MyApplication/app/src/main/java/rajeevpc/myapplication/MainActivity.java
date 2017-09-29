@@ -13,6 +13,8 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+
+
 public class MainActivity extends AppCompatActivity {
     LoginButton loginButton;
     TextView textView;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
         textView  = (TextView)findViewById(R.id.textview);
+        
 
         callbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -33,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText("Login Success \n" +
                 loginResult.getAccessToken().getUserId()+
                 "\n" + loginResult.getAccessToken().getToken());
+
+
+
             }
 
             @Override

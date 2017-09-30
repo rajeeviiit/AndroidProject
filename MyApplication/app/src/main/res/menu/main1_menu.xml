@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Feed Page "
+        android:id="@+id/main_feed_btn"/>
+
+    <item android:title="@string/logout"
+        android:id="@+id/main_logout_btn"
+        />
+</menu>

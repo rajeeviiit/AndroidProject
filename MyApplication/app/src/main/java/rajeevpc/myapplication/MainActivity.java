@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                startActivity(new Intent(MainActivity.this,FeedPage.class));
+
 //                textView.setText("Login Success \n" +
 //                        loginResult.getAccessToken().getUserId()+
 //                        "\n" + loginResult.getAccessToken().getToken());
@@ -57,11 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
                 progressDialog.show();
 //                FirebaseUser current_user = mAuth.getCurrentUser();
-                String uid = loginResult.getAccessToken().getUserId();
+                final String uid = loginResult.getAccessToken().getUserId();
                 mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
-                Log.d("uid",uid +" ");
                 HashMap<String, String> userMap = new HashMap<>();
-                userMap.put("name","Rajeev");
+                userMap.put("name","Rajeev singh");
                 userMap.put("status","Hi there I'm using instagram");
                 userMap.put("image","default");
                 userMap.put("thumb_image","thumb_default");
@@ -70,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             progressDialog.dismiss();
-//                            startActivity(new Intent(MainActivity.this,ProfileActivity.class));
+                            Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+                            intent.putExtra("passuid", uid);
+                            startActivity(intent);
                         }
                     }
                 });

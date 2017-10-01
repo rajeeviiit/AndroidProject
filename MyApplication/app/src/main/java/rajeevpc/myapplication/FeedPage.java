@@ -29,40 +29,7 @@ public class FeedPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_page);
-//        mDisplayImage = (CircleImageView)findViewById(R.id.circleImageView);
-//        mName = (TextView)findViewById(R.id.text_display_name);
-//        mStatus = (TextView)findViewById(R.id.text_status);
-//        mAuth = FirebaseAuth.getInstance();
-//
-//        Bundle bundle = new Bundle();
-//
-//        bundle = getIntent().getExtras();
-//        if (bundle != null)
-//        {   String passuid = bundle.getString("passuid");
-//            System.out.println("passuid : " + passuid);
-//            databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(passuid);
-//
-//            databaseReference.addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                    String image = dataSnapshot.child("image").getValue().toString();
-//                    String name = dataSnapshot.child("name").getValue().toString();
-//                    String status = dataSnapshot.child("status").getValue().toString();
-//                    String thumb_image = dataSnapshot.child("thumb_image").getValue().toString();
-//
-//                    mName.setText(name);
-//                    mStatus.setText(status);
-//                }
-//
-//                @Override
-//                public void onCancelled(DatabaseError databaseError) {
-//
-//                }
-//            });
-//
-//        }
-//
+
     }
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {

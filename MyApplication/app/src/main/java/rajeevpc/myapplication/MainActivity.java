@@ -2,6 +2,8 @@ package rajeevpc.myapplication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -33,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
-
+    SharedPreferences myPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        myPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+        final SharedPreferences.Editor myEditor = myPreferences.edit();
         loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
         loginButton.setReadPermissions("email", "public_profile");
         textView  = (TextView)findViewById(R.id.textview);
@@ -58,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.show();
 //                FirebaseUser current_user = mAuth.getCurrentUser();
                 final String uid = loginResult.getAccessToken().getUserId();
+                myEditor.putString("ID", uid);
+                myEditor.commit();
+                Log.d("ID", myPreferences.getString("ID", "unknown"));
                 mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
                 HashMap<String, String> userMap = new HashMap<>();
                 userMap.put("name","Rajeev singh");
@@ -69,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             progressDialog.dismiss();
-                            Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
-                            intent.putExtra("passuid", uid);
-                            startActivity(intent);
+                            startActivity(new Intent(MainActivity.this,ProfileActivity.class));
                         }
                     }
                 });

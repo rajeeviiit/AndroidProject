@@ -5,20 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rajeevpc.myapplication.MainActivity">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
-    android:text="Login Status"
-    android:id="@+id/textview"
-    android:gravity="center"
-    android:textStyle="bold"/>
+    a
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Login Status"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <com.facebook.login.widget.LoginButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/fb_login_bn"
-        android:layout_centerInParent="true"></com.facebook.login.widget.LoginButton>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"></com.facebook.login.widget.LoginButton>
 </RelativeLayout>
 
 

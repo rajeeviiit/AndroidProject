@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
     SharedPreferences myPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         myPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         final SharedPreferences.Editor myEditor = myPreferences.edit();
-        loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
+        loginButton = (LoginButton) findViewById(R.id.fb_login_bn);
         loginButton.setReadPermissions("email", "public_profile");
-        textView  = (TextView)findViewById(R.id.textview);
+        textView = (TextView) findViewById(R.id.textview);
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(MainActivity.this);
 
@@ -53,35 +54,35 @@ public class MainActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
-//                textView.setText("Login Success \n" +
-//                        loginResult.getAccessToken().getUserId()+
-//                        "\n" + loginResult.getAccessToken().getToken());
-
-
+                progressDialog.setTitle("Logging...");
+                progressDialog.setMessage("Please Wait");
                 progressDialog.show();
-//                FirebaseUser current_user = mAuth.getCurrentUser();
+
                 final String uid = loginResult.getAccessToken().getUserId();
                 myEditor.putString("ID", uid);
                 myEditor.commit();
-                Log.d("ID", myPreferences.getString("ID", "unknown"));
+                Log.d("ID", myPreferences.getString("IDmain", "unknown"));
                 mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
+                Log.d("IDnew123", mDatabase.getKey());
+
+//                if (mDatabase.getKey() == uid) {
+//                       startActivity(new Intent(MainActivity.this,FeedPage.class));
+//                } else {
+
                 HashMap<String, String> userMap = new HashMap<>();
-                userMap.put("name","Rajeev singh");
-                userMap.put("status","Hi there I'm using instagram");
-                userMap.put("image","default");
-                userMap.put("thumb_image","thumb_default");
+                userMap.put("name", "XYZ User");
+                userMap.put("status", "Hi there, I'm using MyApplication");
+                userMap.put("image", "https://firebasestorage.googleapis.com/v0/b/myapplication-cf2b6.appspot.com/o/profile_images%2F861663083999665." +
+                        "jpg?alt=media&token=d68a8048-af88-44ee-a850-e97df0a0923e");
                 mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             progressDialog.dismiss();
-                            startActivity(new Intent(MainActivity.this,ProfileActivity.class));
+                            startActivity(new Intent(MainActivity.this, FeedPage.class));
                         }
                     }
                 });
-
-
 
 
             }
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        callbackManager.onActivityResult(requestCode,resultCode,data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
 
     }
 }

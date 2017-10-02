@@ -6,8 +6,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,9 +28,15 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".FeedPage" />
-        <activity android:name=".StatusActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".FeedPage"></activity>
+        <activity
+            android:name=".StatusActivity"
+            android:parentActivityName=".ProfileActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
     </application>
 
 </manifest>

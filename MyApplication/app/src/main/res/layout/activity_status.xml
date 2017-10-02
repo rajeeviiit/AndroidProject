@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rajeevpc.myapplication.StatusActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/et_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:hint="Your status"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_status"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Your Name"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_status_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/et_name"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/mybutton"
+        android:padding="5dp"
+        android:text="Save changes"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

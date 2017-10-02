@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="rajeevpc.myapplication.PostActivity">
+
+
+        <ImageButton
+            android:id="@+id/imageSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_btn"
+            app:srcCompat="@drawable/add_btn" />
+
+        <EditText
+            android:id="@+id/titleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageSelect"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Post Title..."
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/descField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleField"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Post Description..."
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descField"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimary"
+            android:text="Submit Post"
+            android:textColor="@color/colorWhite" />
+
+
+    </RelativeLayout>
+</ScrollView>

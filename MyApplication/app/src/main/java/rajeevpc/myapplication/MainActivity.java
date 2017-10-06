@@ -22,8 +22,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
@@ -65,24 +68,40 @@ public class MainActivity extends AppCompatActivity {
                 mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
                 Log.d("IDnew123", mDatabase.getKey());
 
-//                if (mDatabase.getKey() == uid) {
-//                       startActivity(new Intent(MainActivity.this,FeedPage.class));
-//                } else {
-
-                HashMap<String, String> userMap = new HashMap<>();
-                userMap.put("name", "XYZ User");
-                userMap.put("status", "Hi there, I'm using MyApplication");
-                userMap.put("image", "https://firebasestorage.googleapis.com/v0/b/myapplication-cf2b6.appspot.com/o/profile_images%2F861663083999665." +
-                        "jpg?alt=media&token=d68a8048-af88-44ee-a850-e97df0a0923e");
-                mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        progressDialog.dismiss();
+                                          startActivity(new Intent(MainActivity.this, FeedPage.class));
+                mDatabase.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            progressDialog.dismiss();
-                            startActivity(new Intent(MainActivity.this, FeedPage.class));
-                        }
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+//                            HashMap<String, String> userMap = new HashMap<>();
+//                            userMap.put("name", "XYZ User");
+//                            userMap.put("status", "Hi there, I'm using MyApplication");
+//                            userMap.put("image", "https://firebasestorage.googleapis.com/v0/b/myapplication-cf2b6.appspot.com/o/profile_images%2F101110593978602." +
+//                                    "jpg?alt=media&token=d68a8048-af88-44ee-a850-e97df0a0923e");
+//                            mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                @Override
+//                                public void onComplete(@NonNull Task<Void> task) {
+//                                    if (task.isSuccessful()) {
+//                                        progressDialog.dismiss();
+//                                          startActivity(new Intent(MainActivity.this, FeedPage.class));
+//
+//                                    }
+//                                }
+//                            });
+
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
                     }
                 });
+
+
 
 
             }

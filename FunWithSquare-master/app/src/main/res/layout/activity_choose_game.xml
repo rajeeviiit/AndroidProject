@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Square Game"
         android:textColor="#fff"
-        android:background="#1E669B"
+        android:background="#A1887F"
         android:id="@+id/square"
         android:layout_margin="5dp"
         android:layout_centerHorizontal="true"/>
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Cube  Game"
         android:textColor="#fff"
-        android:background="#1E669B"
+        android:background="#A1887F"
         android:id="@+id/cube"
         android:layout_margin="5dp"
         android:layout_below="@id/square"

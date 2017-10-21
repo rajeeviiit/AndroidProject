@@ -38,7 +38,7 @@
             android:text="Update Menu"
             android:id="@+id/bupdate"
             android:onClick="updateMenu"
-            android:background="#8C001A"
+            android:background="#7E57C2"
             android:textColor="#ffffff"
             android:layout_marginTop="190dp"
             android:layout_below="@+id/bitem"

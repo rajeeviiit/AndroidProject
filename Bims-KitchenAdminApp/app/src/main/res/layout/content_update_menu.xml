@@ -26,19 +26,19 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp">
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:text="Category "
-        android:textAlignment="center"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:id="@+id/textViewcat"
-        android:background="#8C001A"
-        />
 
-    <Spinner
+        <TextView
+            android:id="@+id/textViewcat"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#673AB7"
+            android:gravity="center"
+            android:text="Category "
+            android:textAlignment="center"
+            android:textColor="#ffffff" />
+
+        <Spinner
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:id="@+id/spinnercat"
@@ -68,7 +68,7 @@
         android:gravity="center"
         android:textColor="#ffffff"
         android:id="@+id/textViewitem"
-        android:background="#8C001A"
+        android:background="#673AB7"
 
         />
 
@@ -103,7 +103,7 @@
         android:gravity="center"
         android:textColor="#ffffff"
         android:id="@+id/textViewprice"
-        android:background="#8C001A"
+        android:background="#673AB7"
 
         />
 
@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:text="Update"
         android:textColor="#ffffff"
-        android:background="#8C001A"
+        android:background="#673AB7"
         android:textAlignment="center"
         android:id="@+id/bupdate"
         android:onClick="update"
@@ -164,7 +164,7 @@
         android:id="@+id/bselect"
         android:textColor="#ffffff"
         android:onClick="select"
-        android:background="#8C001A"
+        android:background="#673AB7"
         android:textAlignment="center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

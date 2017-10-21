@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
 
+
 //                            HashMap<String, String> userMap = new HashMap<>();
 //                            userMap.put("name", "XYZ User");
 //                            userMap.put("status", "Hi there, I'm using MyApplication");

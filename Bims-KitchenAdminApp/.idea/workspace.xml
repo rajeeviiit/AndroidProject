@@ -9,21 +9,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9b0a102-0d0a-40f1-bf3a-a769a8ff16da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+    <list default="true" id="d9b0a102-0d0a-40f1-bf3a-a769a8ff16da" name="Default" comment="updated" />
+    <list id="5d241fb2-2b26-46fe-99b9-6adc39298587" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Anagram/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../Anagram/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Anagram/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Anagram/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Anagram/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Anagram/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_deliveryboy.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_deliveryboy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_update_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_update_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/food_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/food_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_item1.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_item1.xml" />
     </list>
     <ignored path="Bims-KitchenAdminApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -202,6 +193,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -2660,7 +2657,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="android.sdk.path" value="E:/Software/Programming/Android/sdk/androidSdk" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Route4me-master" />
     <property name="device.picker.selection" value="BQSWZLM7759SJJ7P" />
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -2862,6 +2859,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d9b0a102-0d0a-40f1-bf3a-a769a8ff16da" name="Default" comment="" />
+      <changelist id="5d241fb2-2b26-46fe-99b9-6adc39298587" name="New changelist" comment="" />
       <created>1503124545651</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -2874,7 +2872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508609741404</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated">
+      <created>1508609773515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1508609773515</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2928,7 +2933,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change in project" />
-    <option name="LAST_COMMIT_MESSAGE" value="change in project" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
